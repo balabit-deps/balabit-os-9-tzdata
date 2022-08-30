@@ -1,0 +1,10 @@
+debian/tzconfig /usr/sbin
+iso3166.tab usr/share/zoneinfo/
+leap-seconds.list usr/share/zoneinfo/
+leapseconds usr/share/zoneinfo/
+tzdata.zi usr/share/zoneinfo/
+tzgen/* usr/share/zoneinfo/
+zone.tab usr/share/zoneinfo/
+zone1970.tab usr/share/zoneinfo/
+le/*.res usr/share/zoneinfo-icu/44/le/
+be/*.res usr/share/zoneinfo-icu/44/be/
