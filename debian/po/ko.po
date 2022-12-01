@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: tzdata\n"
 "Report-Msgid-Bugs-To: tzdata@packages.debian.org\n"
-"POT-Creation-Date: 2021-09-29 00:36+0200\n"
+"POT-Creation-Date: 2022-11-30 14:31+0100\n"
 "PO-Revision-Date: 2021-10-04 20:49+0900\n"
 "Last-Translator: Changwoo Ryu <cwryu@debian.org>\n"
 "Language-Team: Debian L10N Korean <debian-l10n-korean@lists.debian.org>\n"
@@ -139,7 +139,10 @@ msgid ""
 "Please select the geographic area in which you live. Subsequent "
 "configuration questions will narrow this down by presenting a list of "
 "cities, representing the time zones in which they are located."
-msgstr "거주하고 있는 지리적 지역을 선택하십시오. 이후의 설정 질문에서는 지역을 특정하려고 도시의 목록을 표시합니다. 표시하는 도시는 도시 위치의 표준 시간대를 나타냅니다."
+msgstr ""
+"거주하고 있는 지리적 지역을 선택하십시오. 이후의 설정 질문에서는 지역을 특정"
+"하려고 도시의 목록을 표시합니다. 표시하는 도시는 도시 위치의 표준 시간대를 나"
+"타냅니다."
 
 #. Type: select
 #. Choices
@@ -841,6 +844,13 @@ msgstr "시카고"
 #: ../tzdata.templates:3001
 msgid "Chihuahua"
 msgstr "치와와"
+
+#. Type: select
+#. Choices
+#. Translators: do not translate underscores. You can use spaces instead.
+#: ../tzdata.templates:3001
+msgid "Ciudad_Juarez"
+msgstr ""
 
 #. Type: select
 #. Choices
@@ -2714,15 +2724,15 @@ msgstr "칼리닌그라드"
 #. Choices
 #. Translators: do not translate underscores. You can use spaces instead.
 #: ../tzdata.templates:9001
-msgid "Kyiv"
-msgstr "키예프"
+msgid "Kirov"
+msgstr "키로프"
 
 #. Type: select
 #. Choices
 #. Translators: do not translate underscores. You can use spaces instead.
 #: ../tzdata.templates:9001
-msgid "Kirov"
-msgstr "키로프"
+msgid "Kyiv"
+msgstr "키예프"
 
 #. Type: select
 #. Choices
@@ -2924,13 +2934,6 @@ msgstr "울랴노브스크"
 #. Choices
 #. Translators: do not translate underscores. You can use spaces instead.
 #: ../tzdata.templates:9001
-msgid "Uzhgorod"
-msgstr "우즈호로드"
-
-#. Type: select
-#. Choices
-#. Translators: do not translate underscores. You can use spaces instead.
-#: ../tzdata.templates:9001
 msgid "Vaduz"
 msgstr "바두츠"
 
@@ -2975,13 +2978,6 @@ msgstr "바르샤바"
 #: ../tzdata.templates:9001
 msgid "Zagreb"
 msgstr "자그레브"
-
-#. Type: select
-#. Choices
-#. Translators: do not translate underscores. You can use spaces instead.
-#: ../tzdata.templates:9001
-msgid "Zaporozhye"
-msgstr "자포리자"
 
 #. Type: select
 #. Choices
@@ -3433,3 +3429,9 @@ msgstr "미시건"
 #: ../tzdata.templates:12001
 msgid "Mountain"
 msgstr "산악 지역"
+
+#~ msgid "Uzhgorod"
+#~ msgstr "우즈호로드"
+
+#~ msgid "Zaporozhye"
+#~ msgstr "자포리자"

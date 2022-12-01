@@ -9,8 +9,8 @@ XSBC-Original-Maintainer: GNU Libc Maintainers <debian-glibc@lists.debian.org>
 Uploaders: Clint Adams <clint@debian.org>, Aurelien Jarno <aurel32@debian.org>
 Standards-Version: 4.6.0
 Homepage: https://www.iana.org/time-zones
-Vcs-Git: https://salsa.debian.org/glibc-team/tzdata.git
-Vcs-Browser: https://salsa.debian.org/glibc-team/tzdata
+Vcs-Git: https://git.launchpad.net/~ubuntu-core-dev/ubuntu/+source/tzdata -b ubuntu/jammy
+Vcs-Browser: https://code.launchpad.net/~ubuntu-core-dev/ubuntu/+source/tzdata/+git/tzdata
 
 Package: tzdata
 Architecture: all

@@ -1,3 +1,52 @@
+tzdata (2022g-0ubuntu0.22.04.1) jammy; urgency=medium
+
+  * Update the ICU timezone data to 2022g (LP: #1998321)
+  * Point Vcs-Browser/Git to Launchpad
+
+ -- Benjamin Drung <bdrung@ubuntu.com>  Thu, 01 Dec 2022 13:50:44 +0100
+
+tzdata (2022g-0ubuntu0.22.04.0) jammy; urgency=medium
+
+  * New upstream release (LP: #1998321)
+    - The northern edge of Chihuahua changes to US timekeeping.
+    - Much of Greenland stops changing clocks after March 2023.
+    - Fix some pre-1996 timestamps in northern Canada.
+  * No ICU data update yet as none is yet available upstream.
+  * d/watch: Switch from failing ftp to https
+  * debian/tzdata.templates: Add Ciudad_Juarez
+
+ -- Benjamin Drung <bdrung@ubuntu.com>  Wed, 30 Nov 2022 16:35:45 +0100
+
+tzdata (2022f-0ubuntu0.22.04.1) jammy; urgency=medium
+
+  * Update ICU data to 2022f (LP: #1995601)
+
+ -- Benjamin Drung <bdrung@ubuntu.com>  Mon, 07 Nov 2022 10:49:33 +0100
+
+tzdata (2022f-0ubuntu0.22.04.0) jammy; urgency=medium
+
+  * New upstream release (LP: #1995209):
+    - Mexico will no longer observe DST except near the US border.
+    - Chihuahua has moved to year-round -06 on 2022-10-30.
+    - Fiji no longer observes DST.
+  * No ICU data update yet as none is yet available upstream.
+
+ -- Steve Langasek <steve.langasek@ubuntu.com>  Mon, 31 Oct 2022 02:02:00 +0100
+
+tzdata (2022e-0ubuntu0.22.04.0) jammy; urgency=medium
+
+  * New upstream releases (LP: #1992692):
+    - Palestine transitions are now Saturdays at 02:00. This means 2022 falls
+      back 10-29 at 02:00, not 10-28 at 01:00.
+    - Simplify three Ukraine zones into one. (LP: #1969671)
+    - Jordan and Syria switch from +02/+03 with DST to year-round
+  * debian/tzdata.templates and debian/tzdata.config:
+    - Convert Europe/Kiev into Europe/Kyiv
+    - Remove Uzhgorod and Zaporozhye
+  * Update the ICU timezone data to 2022e
+
+ -- Benjamin Drung <bdrung@ubuntu.com>  Mon, 17 Oct 2022 15:51:00 +0200
+
 tzdata (2022c-0ubuntu0.22.04.0) jammy; urgency=medium
 
   * New upstream release (LP: #1986984):

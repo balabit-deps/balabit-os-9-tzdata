@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: tzdata 2021c-1\n"
 "Report-Msgid-Bugs-To: tzdata@packages.debian.org\n"
-"POT-Creation-Date: 2021-09-29 00:36+0200\n"
+"POT-Creation-Date: 2022-11-30 14:31+0100\n"
 "PO-Revision-Date: 2021-10-02 20:04+0200\n"
 "Last-Translator: Holger Wansing <hwansing@mailbox.org>\n"
 "Language-Team: German <debian-l10n-german@lists.debian.org>\n"
@@ -848,6 +848,13 @@ msgstr "Chicago"
 #: ../tzdata.templates:3001
 msgid "Chihuahua"
 msgstr "Chihuahua"
+
+#. Type: select
+#. Choices
+#. Translators: do not translate underscores. You can use spaces instead.
+#: ../tzdata.templates:3001
+msgid "Ciudad_Juarez"
+msgstr "Ciudad Juárez"
 
 #. Type: select
 #. Choices
@@ -2721,15 +2728,15 @@ msgstr "Kaliningrad"
 #. Choices
 #. Translators: do not translate underscores. You can use spaces instead.
 #: ../tzdata.templates:9001
-msgid "Kyiv"
-msgstr "Kiew"
+msgid "Kirov"
+msgstr "Kirow"
 
 #. Type: select
 #. Choices
 #. Translators: do not translate underscores. You can use spaces instead.
 #: ../tzdata.templates:9001
-msgid "Kirov"
-msgstr "Kirow"
+msgid "Kyiv"
+msgstr "Kiew"
 
 #. Type: select
 #. Choices
@@ -2931,13 +2938,6 @@ msgstr "Uljanowsk"
 #. Choices
 #. Translators: do not translate underscores. You can use spaces instead.
 #: ../tzdata.templates:9001
-msgid "Uzhgorod"
-msgstr "Uschhorod"
-
-#. Type: select
-#. Choices
-#. Translators: do not translate underscores. You can use spaces instead.
-#: ../tzdata.templates:9001
 msgid "Vaduz"
 msgstr "Vaduz"
 
@@ -2982,13 +2982,6 @@ msgstr "Warschau"
 #: ../tzdata.templates:9001
 msgid "Zagreb"
 msgstr "Zagreb"
-
-#. Type: select
-#. Choices
-#. Translators: do not translate underscores. You can use spaces instead.
-#: ../tzdata.templates:9001
-msgid "Zaporozhye"
-msgstr "Saporischschja"
 
 #. Type: select
 #. Choices
@@ -3440,6 +3433,12 @@ msgstr "Michigan"
 #: ../tzdata.templates:12001
 msgid "Mountain"
 msgstr "Gebirge (Mountain)"
+
+#~ msgid "Uzhgorod"
+#~ msgstr "Uschhorod"
+
+#~ msgid "Zaporozhye"
+#~ msgstr "Saporischschja"
 
 #~ msgid "Enderbury"
 #~ msgstr "Enderbury"

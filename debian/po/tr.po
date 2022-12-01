@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: tzdata 2008i-2\n"
 "Report-Msgid-Bugs-To: tzdata@packages.debian.org\n"
-"POT-Creation-Date: 2021-09-29 00:36+0200\n"
+"POT-Creation-Date: 2022-11-30 14:31+0100\n"
 "PO-Revision-Date: 2021-10-04 12:20+0300\n"
 "Last-Translator: Hace Ibrahim OZBAL <hace.ozbal@pardus.org.tr>\n"
 "Language-Team: Debian L10n Turkish <debian-l10n-turkish@lists.debian.org>\n"
@@ -847,6 +847,13 @@ msgstr "Şikago"
 #: ../tzdata.templates:3001
 msgid "Chihuahua"
 msgstr "Chihuahua"
+
+#. Type: select
+#. Choices
+#. Translators: do not translate underscores. You can use spaces instead.
+#: ../tzdata.templates:3001
+msgid "Ciudad_Juarez"
+msgstr ""
 
 #. Type: select
 #. Choices
@@ -2720,15 +2727,15 @@ msgstr "Kaliningrad"
 #. Choices
 #. Translators: do not translate underscores. You can use spaces instead.
 #: ../tzdata.templates:9001
-msgid "Kyiv"
-msgstr "Kiev"
+msgid "Kirov"
+msgstr ""
 
 #. Type: select
 #. Choices
 #. Translators: do not translate underscores. You can use spaces instead.
 #: ../tzdata.templates:9001
-msgid "Kirov"
-msgstr ""
+msgid "Kyiv"
+msgstr "Kiev"
 
 #. Type: select
 #. Choices
@@ -2930,13 +2937,6 @@ msgstr ""
 #. Choices
 #. Translators: do not translate underscores. You can use spaces instead.
 #: ../tzdata.templates:9001
-msgid "Uzhgorod"
-msgstr "Uzhgorod"
-
-#. Type: select
-#. Choices
-#. Translators: do not translate underscores. You can use spaces instead.
-#: ../tzdata.templates:9001
 msgid "Vaduz"
 msgstr "Vaduz"
 
@@ -2981,13 +2981,6 @@ msgstr "Varşova"
 #: ../tzdata.templates:9001
 msgid "Zagreb"
 msgstr "Zagreb"
-
-#. Type: select
-#. Choices
-#. Translators: do not translate underscores. You can use spaces instead.
-#: ../tzdata.templates:9001
-msgid "Zaporozhye"
-msgstr "Zaporosya"
 
 #. Type: select
 #. Choices
@@ -3439,6 +3432,12 @@ msgstr "Michigan"
 #: ../tzdata.templates:12001
 msgid "Mountain"
 msgstr "Mountain"
+
+#~ msgid "Uzhgorod"
+#~ msgstr "Uzhgorod"
+
+#~ msgid "Zaporozhye"
+#~ msgstr "Zaporosya"
 
 #~ msgid "Enderbury"
 #~ msgstr "Enderbury"
