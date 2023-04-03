@@ -1,0 +1,112 @@
+#!/usr/bin/python3
+
+# Author: Benjamin Drung <bdrung@ubuntu.com>
+
+"""Test timezones using Python's zoneinfo module."""
+
+import datetime
+import os
+import pathlib
+import sys
+import typing
+import unittest
+import zoneinfo
+
+
+class TestZoneinfo(unittest.TestCase):
+    """Test timezones using Python's zoneinfo module."""
+
+    def _hours(self, delta: typing.Optional[datetime.timedelta]) -> int:
+        assert delta is not None
+        total_seconds = int(delta.total_seconds())
+        self.assertEqual(total_seconds % 3600, 0)
+        return total_seconds // 3600
+
+    def test_available_timezones_count(self) -> None:
+        """Test available_timezones() count to be reasonable."""
+        zones = len(zoneinfo.available_timezones())
+        self.assertGreaterEqual(zones, 597, "less zones than 2022g-0ubuntu0.22.10.1")
+        self.assertLess(
+            zones, round(597 * 1.1), ">10% more zones than 2022g-0ubuntu0.22.10.1"
+        )
+
+    def test_daylight_saving_transition(self) -> None:
+        """Test daylight saving time transition from Python documentation."""
+        tzinfo = zoneinfo.ZoneInfo("America/Los_Angeles")
+        date = datetime.datetime(2020, 10, 31, 12, tzinfo=tzinfo)
+        self.assertEqual(date.tzname(), "PDT")
+        next_day = date + datetime.timedelta(days=1)
+        self.assertEqual(next_day.tzname(), "PST")
+
+    def _test_equal_zones(
+        self, tzinfo1: zoneinfo.ZoneInfo, tzinfo2: zoneinfo.ZoneInfo
+    ) -> None:
+        """Test timezones to be heuristically equal regardless of the name."""
+        date1 = datetime.datetime(2020, 10, 31, 12, tzinfo=tzinfo1)
+        date2 = date1.replace(tzinfo=tzinfo2)
+        self.assertEqual(date1.tzname(), date2.tzname())
+        self.assertEqual(date1 - date2, datetime.timedelta(seconds=0))
+
+        date1 = datetime.datetime(2021, 7, 3, 12, tzinfo=tzinfo1)
+        date2 = date1.replace(tzinfo=tzinfo2)
+        self.assertEqual(date1.tzname(), date2.tzname())
+        self.assertEqual(date1 - date2, datetime.timedelta(seconds=0))
+
+    @unittest.skipIf(os.environ.get("PYTHONTZPATH"), "requires installed tzdata")
+    def test_localtime(self) -> None:
+        """Test 'localtime' timezone."""
+        localtime = pathlib.Path("/etc/localtime")
+        zone = str(localtime.resolve().relative_to("/usr/share/zoneinfo"))
+        tzinfo = zoneinfo.ZoneInfo("localtime")
+        self._test_equal_zones(tzinfo, zoneinfo.ZoneInfo(zone))
+
+    def _test_timezone(self, zone: str) -> None:
+        """Test zone to load, have a name, and have a reasonable offset."""
+        tzinfo = zoneinfo.ZoneInfo(zone)
+        self.assertEqual(str(tzinfo), zone)
+        date = datetime.datetime(2020, 10, 31, 12, tzinfo=tzinfo)
+
+        tzname = date.tzname()
+        assert tzname is not None
+        self.assertGreaterEqual(len(tzname), 3, tzname)
+        self.assertLessEqual(len(tzname), 5, tzname)
+
+        utc_offset = date.utcoffset()
+        assert utc_offset is not None
+        self.assertEqual(int(utc_offset.total_seconds()) % 900, 0)
+        self.assertLessEqual(utc_offset, datetime.timedelta(hours=14))
+
+    def test_timezones(self) -> None:
+        """Test all zones to load, have a name, and have a reasonable offset."""
+        for zone in zoneinfo.available_timezones():
+            with self.subTest(zone=zone):
+                self._test_timezone(zone)
+
+    def test_2022g(self) -> None:
+        """Test new zone America/Ciudad_Juarez from 2022g release."""
+        tzinfo = zoneinfo.ZoneInfo("America/Ciudad_Juarez")
+        date = datetime.datetime(2022, 12, 1, tzinfo=tzinfo)
+        self.assertEqual(self._hours(date.utcoffset()), -7)
+
+    def test_2023a(self) -> None:
+        """Test Egypt uses DST again from 2023a release."""
+        tzinfo = zoneinfo.ZoneInfo("Africa/Cairo")
+        date = datetime.datetime(2023, 4, 28, 12, 0, tzinfo=tzinfo)
+        self.assertEqual(self._hours(date.utcoffset()), 3)
+
+    def test_2023c(self) -> None:
+        """Test Lebanon's reverted DST delay from 2023c release."""
+        tzinfo = zoneinfo.ZoneInfo("Asia/Beirut")
+        date = datetime.datetime(2023, 4, 2, tzinfo=tzinfo)
+        self.assertEqual(self._hours(date.utcoffset()), 3)
+
+
+def main() -> None:
+    """Run unit tests in verbose mode."""
+    argv = sys.argv.copy()
+    argv.insert(1, "-v")
+    unittest.main(argv=argv)
+
+
+if __name__ == "__main__":
+    main()

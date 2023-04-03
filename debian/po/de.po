@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: tzdata 2021c-1\n"
 "Report-Msgid-Bugs-To: tzdata@packages.debian.org\n"
-"POT-Creation-Date: 2022-11-30 14:31+0100\n"
+"POT-Creation-Date: 2023-04-02 15:31+0200\n"
 "PO-Revision-Date: 2021-10-02 20:04+0200\n"
 "Last-Translator: Holger Wansing <hwansing@mailbox.org>\n"
 "Language-Team: German <debian-l10n-german@lists.debian.org>\n"
@@ -2938,6 +2938,13 @@ msgstr "Uljanowsk"
 #. Choices
 #. Translators: do not translate underscores. You can use spaces instead.
 #: ../tzdata.templates:9001
+msgid "Uzhgorod"
+msgstr "Uschhorod"
+
+#. Type: select
+#. Choices
+#. Translators: do not translate underscores. You can use spaces instead.
+#: ../tzdata.templates:9001
 msgid "Vaduz"
 msgstr "Vaduz"
 
@@ -2982,6 +2989,13 @@ msgstr "Warschau"
 #: ../tzdata.templates:9001
 msgid "Zagreb"
 msgstr "Zagreb"
+
+#. Type: select
+#. Choices
+#. Translators: do not translate underscores. You can use spaces instead.
+#: ../tzdata.templates:9001
+msgid "Zaporozhye"
+msgstr "Saporischschja"
 
 #. Type: select
 #. Choices
@@ -3433,12 +3447,6 @@ msgstr "Michigan"
 #: ../tzdata.templates:12001
 msgid "Mountain"
 msgstr "Gebirge (Mountain)"
-
-#~ msgid "Uzhgorod"
-#~ msgstr "Uschhorod"
-
-#~ msgid "Zaporozhye"
-#~ msgstr "Saporischschja"
 
 #~ msgid "Enderbury"
 #~ msgstr "Enderbury"

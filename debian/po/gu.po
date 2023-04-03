@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: d-i\n"
 "Report-Msgid-Bugs-To: tzdata@packages.debian.org\n"
-"POT-Creation-Date: 2022-11-30 14:31+0100\n"
+"POT-Creation-Date: 2023-04-02 15:31+0200\n"
 "PO-Revision-Date: 2013-12-24 23:13+0100\n"
 "Last-Translator: Kartik Mistry <kartik.mistry@gmail.com>\n"
 "Language-Team: Gujarati <team@utkarsh.org>\n"
@@ -2949,6 +2949,13 @@ msgstr ""
 #. Choices
 #. Translators: do not translate underscores. You can use spaces instead.
 #: ../tzdata.templates:9001
+msgid "Uzhgorod"
+msgstr "ઉઝગોરોડ"
+
+#. Type: select
+#. Choices
+#. Translators: do not translate underscores. You can use spaces instead.
+#: ../tzdata.templates:9001
 msgid "Vaduz"
 msgstr "વાડુઝ"
 
@@ -2993,6 +3000,13 @@ msgstr "વોર્સો"
 #: ../tzdata.templates:9001
 msgid "Zagreb"
 msgstr "ઝાગ્રેબ"
+
+#. Type: select
+#. Choices
+#. Translators: do not translate underscores. You can use spaces instead.
+#: ../tzdata.templates:9001
+msgid "Zaporozhye"
+msgstr "ઝાપારોઝયે"
 
 #. Type: select
 #. Choices
@@ -3444,12 +3458,6 @@ msgstr "મિશિગન"
 #: ../tzdata.templates:12001
 msgid "Mountain"
 msgstr "માઉન્ટેન"
-
-#~ msgid "Uzhgorod"
-#~ msgstr "ઉઝગોરોડ"
-
-#~ msgid "Zaporozhye"
-#~ msgstr "ઝાપારોઝયે"
 
 #~ msgid "Enderbury"
 #~ msgstr "એન્ડરબરી"

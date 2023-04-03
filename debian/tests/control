@@ -1,0 +1,7 @@
+Tests: python
+Depends: python3 (>= 3.9), tzdata
+Restrictions: allow-stderr
+
+Tests: python-icu
+Depends: python3, python3-icu, tzdata
+Restrictions: allow-stderr

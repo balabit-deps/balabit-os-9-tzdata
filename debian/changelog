@@ -1,3 +1,18 @@
+tzdata (2023c-0ubuntu0.22.04.0) jammy; urgency=medium
+
+  * New upstream release (LP: #2012599)
+    - Egypt now uses DST again, from April through October.
+    - This year Morocco springs forward April 23, not April 30.
+    - Palestine delays the start of DST this year.
+    - Much of Greenland still uses DST from 2024 on.
+  * Update the ICU timezone data to 2023c
+  * Test timezones using Python's zoneinfo module
+  * Add autopkgtest test case for 2023c release
+  * Add autopkgtest test case for ICU timezone data 2023a/2023c
+  * Update debconf template and translations
+
+ -- Benjamin Drung <bdrung@ubuntu.com>  Mon, 03 Apr 2023 13:12:42 +0200
+
 tzdata (2022g-0ubuntu0.22.04.1) jammy; urgency=medium
 
   * Update the ICU timezone data to 2022g (LP: #1998321)

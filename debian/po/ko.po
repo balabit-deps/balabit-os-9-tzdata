@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: tzdata\n"
 "Report-Msgid-Bugs-To: tzdata@packages.debian.org\n"
-"POT-Creation-Date: 2022-11-30 14:31+0100\n"
+"POT-Creation-Date: 2023-04-02 15:31+0200\n"
 "PO-Revision-Date: 2021-10-04 20:49+0900\n"
 "Last-Translator: Changwoo Ryu <cwryu@debian.org>\n"
 "Language-Team: Debian L10N Korean <debian-l10n-korean@lists.debian.org>\n"
@@ -2934,6 +2934,13 @@ msgstr "울랴노브스크"
 #. Choices
 #. Translators: do not translate underscores. You can use spaces instead.
 #: ../tzdata.templates:9001
+msgid "Uzhgorod"
+msgstr "우즈호로드"
+
+#. Type: select
+#. Choices
+#. Translators: do not translate underscores. You can use spaces instead.
+#: ../tzdata.templates:9001
 msgid "Vaduz"
 msgstr "바두츠"
 
@@ -2978,6 +2985,13 @@ msgstr "바르샤바"
 #: ../tzdata.templates:9001
 msgid "Zagreb"
 msgstr "자그레브"
+
+#. Type: select
+#. Choices
+#. Translators: do not translate underscores. You can use spaces instead.
+#: ../tzdata.templates:9001
+msgid "Zaporozhye"
+msgstr "자포리자"
 
 #. Type: select
 #. Choices
@@ -3429,9 +3443,3 @@ msgstr "미시건"
 #: ../tzdata.templates:12001
 msgid "Mountain"
 msgstr "산악 지역"
-
-#~ msgid "Uzhgorod"
-#~ msgstr "우즈호로드"
-
-#~ msgid "Zaporozhye"
-#~ msgstr "자포리자"
