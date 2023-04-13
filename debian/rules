@@ -27,10 +27,10 @@ ICU_FILES := metaZones timezoneTypes windowsZones zoneinfo64
 
 override_dh_auto_build-indep:
 	# Generate a tzdata.zi file
-	$(MAKE) AWK=gawk BACKWARD="backward" VERSION_DEPS= tzdata.zi
+	$(MAKE) AWK=gawk BACKWARD="backward" PACKRATDATA=backzone VERSION_DEPS= tzdata.zi
 
 	# Generate the leapseconds file
-	$(MAKE) AWK=gawk leapseconds
+	$(MAKE) AWK=gawk PACKRATDATA=backzone leapseconds
 
 	# Build the timezone data
 	/usr/sbin/zic -d $(TZGEN) -L /dev/null tzdata.zi ; \

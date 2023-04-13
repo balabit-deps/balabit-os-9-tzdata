@@ -1,3 +1,11 @@
+tzdata (2023c-0ubuntu0.22.04.1) jammy; urgency=medium
+
+  * Build timezones that differ pre-1970 (LP: #2003797)
+  * Add autopkgtest test case for pre-1970 timestamps
+  * Update debconf template and translations
+
+ -- Benjamin Drung <bdrung@ubuntu.com>  Thu, 13 Apr 2023 14:59:54 +0200
+
 tzdata (2023c-0ubuntu0.22.04.0) jammy; urgency=medium
 
   * New upstream release (LP: #2012599)

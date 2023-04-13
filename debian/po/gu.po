@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: d-i\n"
 "Report-Msgid-Bugs-To: tzdata@packages.debian.org\n"
-"POT-Creation-Date: 2023-04-02 15:31+0200\n"
+"POT-Creation-Date: 2023-04-03 15:58+0200\n"
 "PO-Revision-Date: 2013-12-24 23:13+0100\n"
 "Last-Translator: Kartik Mistry <kartik.mistry@gmail.com>\n"
 "Language-Team: Gujarati <team@utkarsh.org>\n"
@@ -2057,6 +2057,13 @@ msgstr ""
 #: ../tzdata.templates:7001
 msgid "Gaza"
 msgstr "ગાઝા"
+
+#. Type: select
+#. Choices
+#. Translators: do not translate underscores. You can use spaces instead.
+#: ../tzdata.templates:7001
+msgid "Hanoi"
+msgstr ""
 
 #. Type: select
 #. Choices

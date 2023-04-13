@@ -76,6 +76,14 @@ class TestZoneinfo(unittest.TestCase):
         self.assertEqual(int(utc_offset.total_seconds()) % 900, 0)
         self.assertLessEqual(utc_offset, datetime.timedelta(hours=14))
 
+    def test_pre_1970_timestamps(self) -> None:
+        """Test pre-1970 timestamps of Berlin and Oslo being different."""
+        berlin = zoneinfo.ZoneInfo("Europe/Berlin")
+        date = datetime.datetime(1960, 7, 1, tzinfo=berlin)
+        self.assertEqual(self._hours(date.utcoffset()), 1)
+        oslo = zoneinfo.ZoneInfo("Europe/Oslo")
+        self.assertEqual(self._hours(date.replace(tzinfo=oslo).utcoffset()), 2)
+
     def test_timezones(self) -> None:
         """Test all zones to load, have a name, and have a reasonable offset."""
         for zone in zoneinfo.available_timezones():
