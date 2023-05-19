@@ -1,3 +1,15 @@
+tzdata (2023c-0ubuntu0.22.04.2) jammy; urgency=medium
+
+  * Build tzdata with PACKRATLIST=zone.tab. In combination with
+    PACKRATDATA=backzone (which is used since 2023c-0ubuntu0.22.04.1), time
+    zones that differ pre-1970 and had been resurrected will not incur changes
+    to data from 1970 on. This also removes Asia/Hanoi again. Upgrade
+    Pacific/Enderbury to Pacific/Kanton again. (LP: #2017999)
+  * Add an autopkgtest test case for post-1970 symlink consistency
+  * Update debconf template and translations
+
+ -- Benjamin Drung <bdrung@ubuntu.com>  Sat, 20 May 2023 01:26:56 +0200
+
 tzdata (2023c-0ubuntu0.22.04.1) jammy; urgency=medium
 
   * Build timezones that differ pre-1970 (LP: #2003797)

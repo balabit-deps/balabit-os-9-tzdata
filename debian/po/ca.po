@@ -2163,13 +2163,6 @@ msgstr "Famagusta"
 msgid "Gaza"
 msgstr "Gaza"
 
-#. Type: select
-#. Choices
-#. Translators: do not translate underscores. You can use spaces instead.
-#: ../tzdata.templates:7001
-msgid "Hanoi"
-msgstr ""
-
 # Gnome_2.16_Desktop [gnome-applets-locations.HEAD.ca.po]
 #. Type: select
 #. Choices
