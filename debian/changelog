@@ -1,3 +1,17 @@
+tzdata (2023d-0ubuntu0.22.04) jammy; urgency=medium
+
+  * New upstream version (LP: #2047314):
+    - Ittoqqortoormiit, Greenland changes time zones on 2024-03-31.
+    - Vostok, Antarctica changed time zones on 2023-12-18.
+    - Casey, Antarctica changed time zones five times since 2020.
+    - Code and data fixes for Palestine timestamps starting in 2072.
+    - A new data file zonenow.tab for timestamps starting now.
+  * No ICU data update yet as none is yet available upstream.
+  * Install zonenow.tab in tzdata
+  * Add autopkgtest test case for 2023d release
+
+ -- Benjamin Drung <bdrung@ubuntu.com>  Tue, 02 Jan 2024 20:37:09 +0100
+
 tzdata (2023c-0ubuntu0.22.04.2) jammy; urgency=medium
 
   * Build tzdata with PACKRATLIST=zone.tab. In combination with
