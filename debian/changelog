@@ -1,3 +1,16 @@
+tzdata (2024a-0ubuntu0.22.04) jammy; urgency=medium
+
+  * New upstream version (LP: #2052739):
+    - Kazakhstan unifies on UTC+5 beginning 2024-03-01.
+    - Palestine springs forward a week later after Ramadan.
+    - zic no longer pretends to support indefinite-past DST.
+    - localtime no longer mishandles Ciudad Juárez in 2422.
+  * Add autopkgtest test case for 2024a release
+  * Update the ICU timezone data to 2024a
+  * Add autopkgtest test case for ICU timezone data 2024a
+
+ -- Benjamin Drung <bdrung@ubuntu.com>  Wed, 21 Feb 2024 13:50:24 +0100
+
 tzdata (2023d-0ubuntu0.22.04) jammy; urgency=medium
 
   * New upstream version (LP: #2047314):
