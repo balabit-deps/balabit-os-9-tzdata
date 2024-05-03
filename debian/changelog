@@ -1,3 +1,21 @@
+tzdata (2024a-0ubuntu0.22.04.1) jammy; urgency=medium
+
+  * Do not replace CET, CST6CDT, EET, EST*, HST, MET, MST*, PST8PDT, WET.
+    The replacements differed in using daylight saving. (LP: #2055718)
+  * Correct timezone symlinks when using BACKWARD=backward PACKRATDATA=backzone
+    to fix (at least) the timezone symlinks Africa/Asmera,
+    Antarctica/South_Pole, Iceland, Pacific/Ponape, and Pacific/Truk.
+  * Correct timezone updates on tzdata configuration:
+    - Fix updating US/Indiana-Starke to America/Indiana/Knox
+    - Update Mideast/Riyadh8[789] to Asia/Riyadh
+    - Update America/Fort_Wayne and America/Indianapolis
+      to America/Indiana/Indianapolis
+    - Update America/Knox_IN to America/Indiana/Knox
+    - Update America/Louisville to America/Kentucky/Louisville
+  * Test convert_timezone for consistency
+
+ -- Benjamin Drung <bdrung@ubuntu.com>  Fri, 03 May 2024 19:02:45 +0200
+
 tzdata (2024a-0ubuntu0.22.04) jammy; urgency=medium
 
   * New upstream version (LP: #2052739):

@@ -2,7 +2,7 @@ Source: tzdata
 Section: localization
 Priority: required
 Build-Depends: debhelper-compat (= 13)
-Build-Depends-Indep: gawk, po-debconf, python3 (>= 3.9), symlinks, icu-devtools
+Build-Depends-Indep: gawk, po-debconf, python3 (>= 3.9), python3-debian, symlinks, icu-devtools
 Rules-Requires-Root: no
 Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 XSBC-Original-Maintainer: GNU Libc Maintainers <debian-glibc@lists.debian.org>

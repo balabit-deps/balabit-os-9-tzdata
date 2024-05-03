@@ -90,6 +90,7 @@ override_dh_auto_build-indep:
 
 # The upstream tests are related to the sources. Just skip it.
 override_dh_auto_test:
+	debian/test_timezone_conversions -z "$(TZGEN)"
 	PYTHONTZPATH="$(TZGEN)" debian/tests/python
 
 override_dh_auto_install:

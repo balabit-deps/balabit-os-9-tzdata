@@ -27,6 +27,12 @@ def read_backwards_links(backwards_file: pathlib.Path) -> dict[str, str]:
     return backwards_links
 
 
+def read_link(link: pathlib.Path) -> pathlib.Path:
+    """Return the absolute path to which the symbolic link points."""
+    destination = link.parent / link.readlink()
+    return pathlib.Path(os.path.normpath(destination))
+
+
 class TestZoneinfo(unittest.TestCase):
     """Test timezones using Python's zoneinfo module."""
 
@@ -121,6 +127,28 @@ class TestZoneinfo(unittest.TestCase):
                 future = now + datetime.timedelta(days=30 * 6)
                 self._assert_equal_zones_at_date(future, tz_link, tz_target)
 
+    def assert_not_symlink_to_symlink(self, timezone_path: pathlib.Path) -> None:
+        """Assert that the timezone is not a symlink to another symlink."""
+        if not timezone_path.is_symlink():
+            return
+        destination = read_link(timezone_path)
+        if not destination.is_symlink():
+            return
+        self.fail(
+            f"Symlink to symlink found: {timezone_path} -> {destination}"
+            f" -> {read_link(destination)}"
+        )
+
+    def test_no_symlinks_to_symlinks(self) -> None:
+        """Check that no timezone is a symlink to another symlink."""
+        for timezone in sorted(zoneinfo.available_timezones()):
+            if timezone == "localtime":
+                continue
+            with self.subTest(timezone):
+                for tzpath in zoneinfo.TZPATH:
+                    timezone_path = pathlib.Path(tzpath) / timezone
+                    self.assert_not_symlink_to_symlink(timezone_path)
+
     def test_timezones(self) -> None:
         """Test all zones to load, have a name, and have a reasonable offset."""
         for zone in zoneinfo.available_timezones():
@@ -156,6 +184,7 @@ class TestZoneinfo(unittest.TestCase):
         tzinfo = zoneinfo.ZoneInfo("Asia/Almaty")
         date = datetime.datetime(2024, 3, 2, tzinfo=tzinfo)
         self.assertEqual(self._hours(date.utcoffset()), 5)
+
 
 def main() -> None:
     """Run unit tests in verbose mode."""
