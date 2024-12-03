@@ -127,6 +127,15 @@ msgid "Etc"
 msgstr "기타"
 
 #. Type: select
+#. Choices
+#. Note to translators:
+#. - "Etc" will present users with a list
+#. of "GMT+xx" or "GMT-xx" timezones
+#: ../tzdata.templates:1001
+msgid "Legacy"
+msgstr ""
+
+#. Type: select
 #. Description
 #: ../tzdata.templates:1002
 msgid "Geographic area:"
@@ -539,11 +548,13 @@ msgstr "빈트후크"
 #. Description
 #. Type: select
 #. Description
+#. Type: select
+#. Description
 #: ../tzdata.templates:2002 ../tzdata.templates:3002 ../tzdata.templates:4002
 #: ../tzdata.templates:5002 ../tzdata.templates:6002 ../tzdata.templates:7002
 #: ../tzdata.templates:8002 ../tzdata.templates:9002 ../tzdata.templates:10002
 #: ../tzdata.templates:11002 ../tzdata.templates:12002
-#: ../tzdata.templates:13001
+#: ../tzdata.templates:13001 ../tzdata.templates:14001
 msgid "Time zone:"
 msgstr "표준 시간대:"
 
@@ -571,11 +582,13 @@ msgstr "표준 시간대:"
 #. Description
 #. Type: select
 #. Description
+#. Type: select
+#. Description
 #: ../tzdata.templates:2002 ../tzdata.templates:3002 ../tzdata.templates:4002
 #: ../tzdata.templates:5002 ../tzdata.templates:6002 ../tzdata.templates:7002
 #: ../tzdata.templates:8002 ../tzdata.templates:9002 ../tzdata.templates:10002
 #: ../tzdata.templates:11002 ../tzdata.templates:12002
-#: ../tzdata.templates:13001
+#: ../tzdata.templates:13001 ../tzdata.templates:14001
 msgid "Please select the city or region corresponding to your time zone."
 msgstr "자기 표준 시간대에 해당하는 도시 또는 지역을 선택하십시오."
 

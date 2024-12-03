@@ -129,6 +129,15 @@ msgid "Etc"
 msgstr "その他"
 
 #. Type: select
+#. Choices
+#. Note to translators:
+#. - "Etc" will present users with a list
+#. of "GMT+xx" or "GMT-xx" timezones
+#: ../tzdata.templates:1001
+msgid "Legacy"
+msgstr ""
+
+#. Type: select
 #. Description
 #: ../tzdata.templates:1002
 msgid "Geographic area:"
@@ -540,11 +549,13 @@ msgstr "ウィントフック"
 #. Description
 #. Type: select
 #. Description
+#. Type: select
+#. Description
 #: ../tzdata.templates:2002 ../tzdata.templates:3002 ../tzdata.templates:4002
 #: ../tzdata.templates:5002 ../tzdata.templates:6002 ../tzdata.templates:7002
 #: ../tzdata.templates:8002 ../tzdata.templates:9002 ../tzdata.templates:10002
 #: ../tzdata.templates:11002 ../tzdata.templates:12002
-#: ../tzdata.templates:13001
+#: ../tzdata.templates:13001 ../tzdata.templates:14001
 msgid "Time zone:"
 msgstr "時間帯:"
 
@@ -572,11 +583,13 @@ msgstr "時間帯:"
 #. Description
 #. Type: select
 #. Description
+#. Type: select
+#. Description
 #: ../tzdata.templates:2002 ../tzdata.templates:3002 ../tzdata.templates:4002
 #: ../tzdata.templates:5002 ../tzdata.templates:6002 ../tzdata.templates:7002
 #: ../tzdata.templates:8002 ../tzdata.templates:9002 ../tzdata.templates:10002
 #: ../tzdata.templates:11002 ../tzdata.templates:12002
-#: ../tzdata.templates:13001
+#: ../tzdata.templates:13001 ../tzdata.templates:14001
 msgid "Please select the city or region corresponding to your time zone."
 msgstr "あなたの時間帯に一致する都市または地域を選択してください。"
 

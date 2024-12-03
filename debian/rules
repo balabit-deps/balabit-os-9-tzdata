@@ -33,9 +33,9 @@ override_dh_auto_build-indep:
 	$(MAKE) AWK=gawk PACKRATDATA=backzone PACKRATLIST=zone.tab leapseconds
 
 	# Build the timezone data
-	/usr/sbin/zic -d $(TZGEN) -L /dev/null tzdata.zi ; \
-	/usr/sbin/zic -d $(TZGEN)/posix -L /dev/null tzdata.zi ; \
-	/usr/sbin/zic -d $(TZGEN)/right -L leapseconds tzdata.zi ; \
+	/usr/sbin/zic -b fat -d $(TZGEN) -L /dev/null tzdata.zi ; \
+	/usr/sbin/zic -b fat -d $(TZGEN)/posix -L /dev/null tzdata.zi ; \
+	/usr/sbin/zic -b fat -d $(TZGEN)/right -L leapseconds tzdata.zi ; \
 
 	# Replace hardlinks by symlinks
 	grep '^L ' $(CURDIR)/tzdata.zi | while read L target name ; do \
@@ -55,7 +55,7 @@ override_dh_auto_build-indep:
 	echo "# - \"Etc\" will present users with a list" ; \
 	echo "#    of \"GMT+xx\" or \"GMT-xx\" timezones" ; \
 	echo -n "__Choices: " ; \
-	echo "$(TEMPLATES_AREAS)" | sed -e 's# #, #g' -e 's#, $$##' ; \
+	echo "$(TEMPLATES_AREAS) Legacy" | sed -e 's# #, #g' -e 's#, $$##' ; \
 	echo "_Description: Geographic area:" ; \
 	echo " Please select the geographic area in which you live. Subsequent" ; \
 	echo " configuration questions will narrow this down by presenting a list of" ; \
@@ -78,7 +78,15 @@ override_dh_auto_build-indep:
 	    echo "_Description: Time zone:" ; \
 	    echo " Please select the city or region corresponding to your time zone." ; \
 	    echo ; \
-	done ) > $(TEMPLATES_FILE)
+	done ; \
+	echo "Template: tzdata/Zones/Legacy" ; \
+	echo "Type: select" ; \
+	echo "# Translators: do not translate underscores. You can use spaces instead." ; \
+	echo "#flag:partial" ; \
+	echo "Choices: CET, CST6CDT, EET, EST, EST5EDT, HST, MET, MST, MST7MDT, PST8PDT, WET" ; \
+	echo "_Description: Time zone:" ; \
+	echo " Please select the city or region corresponding to your time zone." ; \
+	) > $(TEMPLATES_FILE)
 	debconf-updatepo
 
 	mkdir -p le be

@@ -20,10 +20,10 @@ Forwarded: https://mm.icann.org/pipermail/tz/2024-April/058853.html
  2 files changed, 6 insertions(+), 6 deletions(-)
 
 diff --git a/backward b/backward
-index 65c711b..16a01e5 100644
+index 0236751..1e5de57 100644
 --- a/backward
 +++ b/backward
-@@ -30,7 +30,7 @@
+@@ -31,7 +31,7 @@
  # Pre-1993 naming conventions
  
  # Link	TARGET			LINK-NAME	#= TARGET1
@@ -32,7 +32,7 @@ index 65c711b..16a01e5 100644
  Link	Australia/Lord_Howe	Australia/LHI
  Link	Australia/Sydney	Australia/NSW
  Link	Australia/Darwin	Australia/North
-@@ -40,7 +40,7 @@ Link	Australia/Hobart	Australia/Tasmania
+@@ -41,7 +41,7 @@ Link	Australia/Hobart	Australia/Tasmania
  Link	Australia/Melbourne	Australia/Victoria
  Link	Australia/Perth		Australia/West
  Link	Australia/Broken_Hill	Australia/Yancowinna
@@ -41,7 +41,7 @@ index 65c711b..16a01e5 100644
  Link	America/Noronha		Brazil/DeNoronha
  Link	America/Sao_Paulo	Brazil/East
  Link	America/Manaus		Brazil/West
-@@ -101,7 +101,7 @@ Link	America/Mazatlan	Mexico/BajaSur
+@@ -110,7 +110,7 @@ Link	America/Mazatlan	Mexico/BajaSur
  Link	America/Mexico_City	Mexico/General
  Link	Pacific/Auckland	NZ
  Link	Pacific/Chatham		NZ-CHAT
@@ -50,7 +50,7 @@ index 65c711b..16a01e5 100644
  Link	Asia/Shanghai		PRC
  Link	Europe/Warsaw		Poland
  Link	Europe/Lisbon		Portugal
-@@ -298,7 +298,7 @@ Link	Africa/Nairobi		Africa/Asmera	#= Africa/Asmara
+@@ -309,7 +309,7 @@ Link	Africa/Nairobi		Africa/Asmera	#= Africa/Asmara
  Link	America/Nuuk		America/Godthab
  Link	Asia/Ashgabat		Asia/Ashkhabad
  Link	Asia/Kolkata		Asia/Calcutta
@@ -60,10 +60,10 @@ index 65c711b..16a01e5 100644
  # Istanbul is in both continents.
  Link	Europe/Istanbul		Asia/Istanbul
 diff --git a/ziguard.awk b/ziguard.awk
-index 7a3404f..f6b8d24 100644
+index c0acb72..d7e9ba3 100644
 --- a/ziguard.awk
 +++ b/ziguard.awk
-@@ -340,7 +340,7 @@ function make_linkline(oldline, target, linkname, oldtarget, comment, \
+@@ -336,7 +336,7 @@ function make_linkline(oldline, target, linkname, oldtarget, comment, \
    return "Link\t" target "\t" replsuffix comment
  }
  
@@ -72,7 +72,7 @@ index 7a3404f..f6b8d24 100644
    $0 = make_linkline($0, $5, $3, $2)
  }
  
-@@ -378,7 +378,7 @@ function cut_link_chains_short( \
+@@ -374,7 +374,7 @@ function cut_link_chains_short( \
  }
  
  END {

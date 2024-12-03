@@ -21,21 +21,7 @@ LOG_FORMAT = "%(levelname)s: %(message)s"
 SPECIAL = {"Factory", "localtime"}
 # Not selectable timezones that are not mentioned in the backward file.
 # See also https://launchpad.net/bugs/2030684
-EXCLUDE_UNSELECTABLE = {
-    "CET",
-    "CST6CDT",
-    "EET",
-    "EST",
-    "EST5EDT",
-    "GMT",
-    "HST",
-    "MET",
-    "MST",
-    "MST7MDT",
-    "PST8PDT",
-    "UTC",
-    "WET",
-}
+EXCLUDE_UNSELECTABLE = {"GMT", "UTC"}
 
 
 class ConvertTimezone:
@@ -108,7 +94,11 @@ def get_debconf_choices(template_filename: pathlib.Path) -> set[str]:
                 continue
             area = area_match.group(1)
             choices = paragraph.get("Choices", paragraph.get("__Choices", ""))
-            debconf_choices.update([f"{area}/{c}" for c in choices.split(", ")])
+            choices = choices.split(", ")
+            if area == "Legacy":
+                debconf_choices.update(choices)
+            else:
+                debconf_choices.update([f"{area}/{c}" for c in choices])
     if not debconf_choices:
         logger.error("Found no selectable timezones in %s.", template_filename)
         sys.exit(1)

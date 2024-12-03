@@ -1,3 +1,7 @@
+Tests: debconf
+Depends: python3, tzdata
+Restrictions: allow-stderr needs-root
+
 Tests: python
 Depends: python3 (>= 3.9), tzdata
 Restrictions: allow-stderr

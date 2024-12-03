@@ -185,6 +185,12 @@ class TestZoneinfo(unittest.TestCase):
         date = datetime.datetime(2024, 3, 2, tzinfo=tzinfo)
         self.assertEqual(self._hours(date.utcoffset()), 5)
 
+    def test_2024b(self) -> None:
+        """Test 2024b release: Azores did not observe DST from 1977 to 1981."""
+        tzinfo = zoneinfo.ZoneInfo("Atlantic/Azores")
+        date = datetime.datetime(1980, 7, 3, tzinfo=tzinfo)
+        self.assertEqual(self._hours(date.utcoffset()), -1)
+
 
 def main() -> None:
     """Run unit tests in verbose mode."""

@@ -1,3 +1,21 @@
+tzdata (2024b-0ubuntu0.22.04) jammy; urgency=medium
+
+  * New upstream release (LP: #2079966):
+    - Improve historical data for Mexico, Mongolia, and Portugal.
+    - System V names are now obsolescent (reverted, see below).
+    - The main data form now uses %z.
+    - Asia/Choibalsan is now an alias for Asia/Ulaanbaatar
+  * Add autopkgtest test case for 2024b release
+  * Update the ICU timezone data to 2024b
+  * Add autopkgtest test case for ICU timezone data 2024b
+  * Build timezones with zic -b 'fat' (Closes: #1084111)
+  * Move UNIX System V zones back from backzone to backwards file
+    to keep them unchanged for the stable release updates.
+  * Test debconf configuration with autopkgtest
+  * Make remaining legacy timezones selectable in debconf (LP: #2070285)
+
+ -- Benjamin Drung <bdrung@ubuntu.com>  Wed, 04 Dec 2024 00:58:03 +0100
+
 tzdata (2024a-0ubuntu0.22.04.1) jammy; urgency=medium
 
   * Do not replace CET, CST6CDT, EET, EST*, HST, MET, MST*, PST8PDT, WET.

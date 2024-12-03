@@ -3,7 +3,7 @@ Type: select
 # Note to translators:
 # - "Etc" will present users with a list
 #    of "GMT+xx" or "GMT-xx" timezones
-__Choices: Africa, America, Antarctica, Australia, Arctic, Asia, Atlantic, Europe, Indian, Pacific, US, Etc
+__Choices: Africa, America, Antarctica, Australia, Arctic, Asia, Atlantic, Europe, Indian, Pacific, US, Etc, Legacy
 _Description: Geographic area:
  Please select the geographic area in which you live. Subsequent
  configuration questions will narrow this down by presenting a list of
@@ -105,3 +105,10 @@ Choices: GMT, GMT+0, GMT+1, GMT+10, GMT+11, GMT+12, GMT+2, GMT+3, GMT+4, GMT+5, 
 _Description: Time zone:
  Please select the city or region corresponding to your time zone.
 
+Template: tzdata/Zones/Legacy
+Type: select
+# Translators: do not translate underscores. You can use spaces instead.
+#flag:partial
+Choices: CET, CST6CDT, EET, EST, EST5EDT, HST, MET, MST, MST7MDT, PST8PDT, WET
+_Description: Time zone:
+ Please select the city or region corresponding to your time zone.
