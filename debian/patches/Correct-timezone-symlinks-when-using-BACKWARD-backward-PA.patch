@@ -1,5 +1,5 @@
 From: Benjamin Drung <benjamin.drung@canonical.com>
-Date: Wed, 3 Apr 2024 15:14:50 +0200
+Date: Thu, 30 Jan 2025 20:33:59 +0100
 Subject: Correct timezone symlinks when using BACKWARD=backward
  PACKRATDATA=backzone
 
@@ -7,17 +7,18 @@ When using BACKWARD=backward PACKRATDATA=backzone the symlinks might
 point to the incorrect file (e.g. Africa/Asmera points to Africa/Nairobi
 instead of Africa/Asmara).
 
-Move the link to link feature from vanguard to main dataform to produce
-correct symlink (e.g. Africa/Asmera -> Africa/Asmara) in this case. Drop
-those link from `backward` that would cause symlinks to symlinks.
+Move the link to link feature from vanguard to main and rearguard
+dataform to produce correct symlink (e.g. Africa/Asmera ->
+Africa/Asmara) in this case. Drop those link from `backward` that would
+cause symlinks to symlinks.
 
 See https://bugs.launchpad.net/ubuntu/+source/tzdata/+bug/2062522
 
 Forwarded: https://mm.icann.org/pipermail/tz/2024-April/058853.html
 ---
  backward    | 8 ++++----
- ziguard.awk | 4 ++--
- 2 files changed, 6 insertions(+), 6 deletions(-)
+ ziguard.awk | 5 +----
+ 2 files changed, 5 insertions(+), 8 deletions(-)
 
 diff --git a/backward b/backward
 index 0236751..1e5de57 100644
@@ -60,7 +61,7 @@ index 0236751..1e5de57 100644
  # Istanbul is in both continents.
  Link	Europe/Istanbul		Asia/Istanbul
 diff --git a/ziguard.awk b/ziguard.awk
-index c0acb72..d7e9ba3 100644
+index c0acb72..da96f57 100644
 --- a/ziguard.awk
 +++ b/ziguard.awk
 @@ -336,7 +336,7 @@ function make_linkline(oldline, target, linkname, oldtarget, comment, \
@@ -68,16 +69,17 @@ index c0acb72..d7e9ba3 100644
  }
  
 -/^Link/ && $4 == "#=" && DATAFORM == "vanguard" {
-+/^Link/ && $4 == "#=" && (DATAFORM != "rearguard") {
++/^Link/ && $4 == "#=" {
    $0 = make_linkline($0, $5, $3, $2)
  }
  
-@@ -374,7 +374,7 @@ function cut_link_chains_short( \
+@@ -374,9 +374,6 @@ function cut_link_chains_short( \
  }
  
  END {
 -  if (DATAFORM != "vanguard") {
-+  if (DATAFORM == "rearguard") {
-     cut_link_chains_short()
-   }
+-    cut_link_chains_short()
+-  }
    for (i = 1; i <= NR; i++)
+     print line[i]
+ }

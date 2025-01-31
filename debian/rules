@@ -27,7 +27,7 @@ ICU_FILES := metaZones timezoneTypes windowsZones zoneinfo64
 
 override_dh_auto_build-indep:
 	# Generate a tzdata.zi file
-	$(MAKE) AWK=gawk BACKWARD="backward" PACKRATDATA=backzone PACKRATLIST=zone.tab VERSION_DEPS= tzdata.zi
+	$(MAKE) AWK=gawk BACKWARD="backward" DATAFORM=rearguard PACKRATDATA=backzone PACKRATLIST=zone.tab VERSION_DEPS= tzdata.zi
 
 	# Generate the leapseconds file
 	$(MAKE) AWK=gawk PACKRATDATA=backzone PACKRATLIST=zone.tab leapseconds
