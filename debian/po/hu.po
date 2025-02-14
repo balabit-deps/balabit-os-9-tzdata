@@ -3471,12 +3471,3 @@ msgstr "Michigan"
 #: ../tzdata.templates:12001
 msgid "Mountain"
 msgstr "Mountain"
-
-#~ msgid "Enderbury"
-#~ msgstr "Enderbury (Főnix-szigetek)"
-
-#~ msgid "SystemV"
-#~ msgstr "SystemV"
-
-#~ msgid "Pacific-New"
-#~ msgstr "Csendes-óceáni - új"

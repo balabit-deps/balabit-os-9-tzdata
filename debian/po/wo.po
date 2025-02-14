@@ -3486,14 +3486,3 @@ msgstr ""
 #: ../tzdata.templates:12001
 msgid "Mountain"
 msgstr ""
-
-#~ msgid "Enderbury"
-#~ msgstr "Enderbury (îles Phoenix)"
-
-#~ msgid "SystemV"
-#~ msgstr "SystemV"
-
-#, fuzzy
-#~| msgid "Pacific"
-#~ msgid "Pacific-New"
-#~ msgstr "Pasifik"

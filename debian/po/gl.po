@@ -3461,12 +3461,3 @@ msgstr "Michigan"
 #: ../tzdata.templates:12001
 msgid "Mountain"
 msgstr "Montañas"
-
-#~ msgid "Enderbury"
-#~ msgstr "Enderbury (Illas Phoenix)"
-
-#~ msgid "SystemV"
-#~ msgstr "SystemV"
-
-#~ msgid "Pacific-New"
-#~ msgstr "Pacífico-Novo"

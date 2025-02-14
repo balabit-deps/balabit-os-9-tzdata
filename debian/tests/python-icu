@@ -40,6 +40,12 @@ class TestICU(unittest.TestCase):
         date = datetime.datetime(1980, 7, 3)
         self.assertEqual(self._hours(tzinfo.utcoffset(date)), -1)
 
+    def test_2025a(self) -> None:
+        """Test 2025a release: Paraguary stopped using DST from 2024-10-15 on."""
+        tzinfo = icu.ICUtzinfo(icu.TimeZone.createTimeZone("America/Asuncion"))
+        date = datetime.datetime(2025, 3, 23)
+        self.assertEqual(self._hours(tzinfo.utcoffset(date)), -3)
+
 
 def main() -> None:
     """Run unit tests in verbose mode."""

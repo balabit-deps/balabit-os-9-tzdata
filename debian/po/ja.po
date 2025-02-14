@@ -3457,12 +3457,3 @@ msgstr "ミシガン"
 #: ../tzdata.templates:12001
 msgid "Mountain"
 msgstr "マウンテン"
-
-#~ msgid "Enderbury"
-#~ msgstr "エンダーベリー"
-
-#~ msgid "SystemV"
-#~ msgstr "SystemV"
-
-#~ msgid "Pacific-New"
-#~ msgstr "太平洋-新"

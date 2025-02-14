@@ -3497,14 +3497,3 @@ msgstr ""
 #: ../tzdata.templates:12001
 msgid "Mountain"
 msgstr ""
-
-#~ msgid "Enderbury"
-#~ msgstr "Эндарбары"
-
-#~ msgid "SystemV"
-#~ msgstr "SystemV"
-
-#, fuzzy
-#~| msgid "Pacific"
-#~ msgid "Pacific-New"
-#~ msgstr "Ціхі акіян"

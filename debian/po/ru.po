@@ -3465,12 +3465,3 @@ msgstr "Мичиган"
 #: ../tzdata.templates:12001
 msgid "Mountain"
 msgstr "Горное"
-
-#~ msgid "Enderbury"
-#~ msgstr "Эндербери"
-
-#~ msgid "SystemV"
-#~ msgstr "В соответствии с SystemV"
-
-#~ msgid "Pacific-New"
-#~ msgstr "Тихоокеанское новое"

@@ -3490,14 +3490,3 @@ msgstr ""
 #: ../tzdata.templates:12001
 msgid "Mountain"
 msgstr ""
-
-#~ msgid "Enderbury"
-#~ msgstr "Ендербъри"
-
-#~ msgid "SystemV"
-#~ msgstr "SystemV"
-
-#, fuzzy
-#~| msgid "Pacific"
-#~ msgid "Pacific-New"
-#~ msgstr "Тихи океан"

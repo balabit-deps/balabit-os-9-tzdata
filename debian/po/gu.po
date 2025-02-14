@@ -3471,12 +3471,3 @@ msgstr "મિશિગન"
 #: ../tzdata.templates:12001
 msgid "Mountain"
 msgstr "માઉન્ટેન"
-
-#~ msgid "Enderbury"
-#~ msgstr "એન્ડરબરી"
-
-#~ msgid "SystemV"
-#~ msgstr "સિસ્ટમV"
-
-#~ msgid "Pacific-New"
-#~ msgstr "પેસેફિક-નવું"

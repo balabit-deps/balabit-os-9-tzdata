@@ -115,5 +115,5 @@ update-icu:
 	mkdir -p debian/icu/
 	cd debian/icu/; \
 	for icu in $(ICU_FILES); do \
-	    wget https://raw.githubusercontent.com/unicode-org/icu-data/master/tzdata/icunew/$(DEB_VERSION_UPSTREAM)/44/$$icu.txt -O $$icu.txt; \
+	    wget https://raw.githubusercontent.com/unicode-org/icu-data/main/tzdata/icunew/$(DEB_VERSION_UPSTREAM)/44/$$icu.txt -O $$icu.txt; \
 	done

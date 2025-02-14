@@ -3463,9 +3463,3 @@ msgstr "มิชิแกน"
 #: ../tzdata.templates:12001
 msgid "Mountain"
 msgstr "ภูเขา"
-
-#~ msgid "SystemV"
-#~ msgstr "SystemV"
-
-#~ msgid "Pacific-New"
-#~ msgstr "แปซิฟิก-ใหม่"

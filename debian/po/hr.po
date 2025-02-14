@@ -3501,14 +3501,3 @@ msgstr ""
 #| msgid "Moncton"
 msgid "Mountain"
 msgstr "Moncton"
-
-#~ msgid "Enderbury"
-#~ msgstr "Enderbury"
-
-#~ msgid "SystemV"
-#~ msgstr "SystemV"
-
-#, fuzzy
-#~| msgid "Pacific"
-#~ msgid "Pacific-New"
-#~ msgstr "Pacific"

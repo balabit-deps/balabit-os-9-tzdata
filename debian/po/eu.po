@@ -3473,12 +3473,3 @@ msgstr "Michigan"
 #: ../tzdata.templates:12001
 msgid "Mountain"
 msgstr "Mendia"
-
-#~ msgid "Enderbury"
-#~ msgstr "Enderbury"
-
-#~ msgid "SystemV"
-#~ msgstr "SystemV"
-
-#~ msgid "Pacific-New"
-#~ msgstr "Pazifiko berria"

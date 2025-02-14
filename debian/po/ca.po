@@ -3667,12 +3667,3 @@ msgstr "Michigan"
 #: ../tzdata.templates:12001
 msgid "Mountain"
 msgstr "Muntanya"
-
-#~ msgid "Enderbury"
-#~ msgstr "Enderbury"
-
-#~ msgid "SystemV"
-#~ msgstr "SystemV"
-
-#~ msgid "Pacific-New"
-#~ msgstr "Pacific-New"

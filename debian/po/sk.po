@@ -3467,12 +3467,3 @@ msgstr "Michigan"
 #: ../tzdata.templates:12001
 msgid "Mountain"
 msgstr "Americké horské"
-
-#~ msgid "Enderbury"
-#~ msgstr "Enderbury"
-
-#~ msgid "SystemV"
-#~ msgstr "Konvencie SystemV"
-
-#~ msgid "Pacific-New"
-#~ msgstr "Tichomorské nové"

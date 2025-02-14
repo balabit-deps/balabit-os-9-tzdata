@@ -3462,12 +3462,3 @@ msgstr "Michigan"
 #: ../tzdata.templates:12001
 msgid "Mountain"
 msgstr "Horské"
-
-#~ msgid "Enderbury"
-#~ msgstr "Enderbury (Phoenixovy ostrovy)"
-
-#~ msgid "SystemV"
-#~ msgstr "SystemV"
-
-#~ msgid "Pacific-New"
-#~ msgstr "Pacifik - nové"

@@ -3473,12 +3473,3 @@ msgstr "מישיגן"
 #: ../tzdata.templates:12001
 msgid "Mountain"
 msgstr "אזור ההרים"
-
-#~ msgid "Enderbury"
-#~ msgstr "אנדרבורי (איי פניקס)"
-
-#~ msgid "SystemV"
-#~ msgstr "SystemV"
-
-#~ msgid "Pacific-New"
-#~ msgstr "פסיפיק (האוקיינוס השקט) - חדש"

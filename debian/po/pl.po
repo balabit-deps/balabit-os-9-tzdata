@@ -3462,12 +3462,3 @@ msgstr "Michigan"
 #: ../tzdata.templates:12001
 msgid "Mountain"
 msgstr "Czas górski"
-
-#~ msgid "Enderbury"
-#~ msgstr "Enderbury"
-
-#~ msgid "SystemV"
-#~ msgstr "(wg stref System V)"
-
-#~ msgid "Pacific-New"
-#~ msgstr "Pacific-New"

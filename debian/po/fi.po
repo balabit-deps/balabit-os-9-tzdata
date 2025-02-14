@@ -3476,14 +3476,3 @@ msgstr ""
 #: ../tzdata.templates:12001
 msgid "Mountain"
 msgstr "Vuori"
-
-#~ msgid "Enderbury"
-#~ msgstr "Enderbury"
-
-#~ msgid "SystemV"
-#~ msgstr "SystemV-tyylinen"
-
-#, fuzzy
-#~| msgid "Pacific"
-#~ msgid "Pacific-New"
-#~ msgstr "Tyyni valtameri"
