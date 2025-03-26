@@ -197,6 +197,12 @@ class TestZoneinfo(unittest.TestCase):
         date = datetime.datetime(2024, 10, 16, tzinfo=tzinfo)
         self.assertEqual(tzinfo.dst(date), datetime.timedelta(0))
 
+    def test_2025b(self) -> None:
+        """Test 2025b release: Coyhaique stopped using DST from 2025-03-20 on."""
+        tzinfo = zoneinfo.ZoneInfo("America/Coyhaique")
+        date = datetime.datetime(2025, 3, 21, tzinfo=tzinfo)
+        self.assertEqual(tzinfo.dst(date), datetime.timedelta(0))
+
 def main() -> None:
     """Run unit tests in verbose mode."""
     argv = sys.argv.copy()

@@ -1,3 +1,16 @@
+tzdata (2025b-0ubuntu0.22.04) jammy; urgency=medium
+
+  * New upstream release (LP: #2104284):
+    - New America/Coyhaique zone for Aysén Region in Chile, which moves
+      from -04/-03 to -03. It will not change its clocks on 2025-04-05.
+    - Improve historical data for Iran
+  * Add America/Coyhaique to tzdata.install and debconf templates
+  * Update English, French and Spanish debconf translations for Coyhaique
+  * Add autopkgtest test case for 2025b release
+  * No ICU data update yet as none is yet available upstream.
+
+ -- Benjamin Drung <bdrung@ubuntu.com>  Wed, 26 Mar 2025 18:44:41 +0100
+
 tzdata (2025a-0ubuntu0.22.04) jammy; urgency=medium
 
   * New upstream release (LP: #2095233):
