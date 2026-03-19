@@ -203,6 +203,20 @@ class TestZoneinfo(unittest.TestCase):
         date = datetime.datetime(2025, 3, 21, tzinfo=tzinfo)
         self.assertEqual(tzinfo.dst(date), datetime.timedelta(0))
 
+    def test_2025c(self) -> None:
+        """Test 2025c release: Baja California agreed with California's DST
+        rules in 1961 through 1975."""
+        tzinfo = zoneinfo.ZoneInfo("America/Tijuana")
+        date = datetime.datetime(1961, 5, 1, tzinfo=tzinfo)
+        self.assertEqual(self._hours(date.utcoffset()), -7)
+
+    def test_2026a(self) -> None:
+        """Test 2026a release: Moldova has used EU transition times since 2022."""
+        tzinfo = zoneinfo.ZoneInfo("Europe/Chisinau")
+        date = datetime.datetime(2022, 3, 27, 3, tzinfo=tzinfo)
+        self.assertEqual(self._hours(date.utcoffset()), 2)
+
+
 def main() -> None:
     """Run unit tests in verbose mode."""
     argv = sys.argv.copy()
